@@ -1,0 +1,172 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/menu.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Roboto-Thin.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Roboto-Black.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 74
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.635294, 0.635294, 0.635294, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 22
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.87451, 0.87451, 0.87451, 1 ), Color( 0.87451, 0.87451, 0.87451, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FadeOut:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Welcome" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.827451, 0.827451, 0.827451, 1 )
+
+[node name="WelcomeTo" type="Label" parent="Welcome"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -155.0
+margin_top = -147.117
+margin_right = 155.0
+margin_bottom = -87.1174
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+text = "WELCOME TO"
+
+[node name="Cubethon" type="Label" parent="Welcome"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -194.5
+margin_top = -68.1174
+margin_right = 194.5
+margin_bottom = 19.8826
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.345098, 0.345098, 1 )
+text = "CUBETHON"
+
+[node name="Start" type="Button" parent="Welcome"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -71.0
+margin_top = 41.8826
+margin_right = 72.0
+margin_bottom = 84.8826
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_hover = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_pressed = Color( 0.588235, 0.588235, 0.588235, 1 )
+text = "START"
+
+[node name="Quit" type="Button" parent="Welcome"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -71.0
+margin_top = 96.1468
+margin_right = 72.0
+margin_bottom = 139.147
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_hover = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_pressed = Color( 0.588235, 0.588235, 0.588235, 1 )
+text = "QUIT"
+
+[node name="FullScreen" type="Button" parent="Welcome"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -60.0
+margin_right = 180.0
+margin_bottom = -17.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_hover = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_pressed = Color( 0.588235, 0.588235, 0.588235, 1 )
+toggle_mode = true
+text = "FULLSCREEN"
+
+[node name="FadeOut" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.87451, 0.87451, 0.87451, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "FadeOut"
+anims/FadeOut = SubResource( 9 )
+[connection signal="pressed" from="Welcome/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Welcome/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="toggled" from="Welcome/FullScreen" to="." method="_on_FullScreen_toggled"]
