@@ -32,11 +32,16 @@ script = ExtResource( 1 )
 transform = Transform( 0.808439, -0.388845, -0.441844, 0, -0.750694, 0.66065, -0.58858, -0.534095, -0.60689, 0, 5.12364, -9.87911 )
 light_energy = 0.75
 shadow_enabled = true
+shadow_bias = 0.03
+directional_shadow_blend_splits = true
+directional_shadow_normal_bias = 0.0
+directional_shadow_bias_split_scale = 1.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 2 )
 
 [node name="Camera" parent="." instance=ExtResource( 3 )]
+far = 80.0
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 can_sleep = false

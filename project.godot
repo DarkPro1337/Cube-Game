@@ -61,6 +61,9 @@ common/physics_fps=120
 [rendering]
 
 quality/2d/use_pixel_snap=true
+quality/directional_shadow/size=10240
+quality/shadow_atlas/size=8192
 quality/shadows/filter_mode=2
+quality/filters/use_nearest_mipmap_filter=true
 quality/filters/msaa=2
 environment/default_environment="res://default_env.tres"
