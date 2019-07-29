@@ -16,3 +16,7 @@ func _on_Quit_pressed():
 func _on_Retry_pressed():
 	global.current_stage = 1
 	get_tree().change_scene_to(load("res://Scenes/Levels/Level01.tscn"))
+
+func _on_Menu_pressed():
+	global.current_stage = 1
+	get_tree().change_scene_to(load("res://Scenes/Menu.tscn"))

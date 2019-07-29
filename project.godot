@@ -17,8 +17,7 @@ _global_script_class_icons={
 
 config/name="CUBETHON"
 run/main_scene="res://Scenes/Menu.tscn"
-boot_splash/image="res://boot-splash.png"
-boot_splash/fullsize=false
+boot_splash/image="res://boot-splah_transparent.png"
 boot_splash/bg_color=Color( 0.827451, 0.827451, 0.827451, 1 )
 config/icon="res://icon.png"
 
@@ -27,10 +26,14 @@ config/icon="res://icon.png"
 global="*res://Scripts/global.gd"
 gamemanager="*res://Scripts/gamemanager.gd"
 
+[debug]
+
+settings/fps/force_fps=60
+
 [display]
 
-window/size/width=1280
-window/size/height=720
+window/size/width=1920
+window/size/height=1080
 
 [input]
 
@@ -54,16 +57,11 @@ ui_pause={
  ]
 }
 
-[physics]
-
-common/physics_fps=120
-
 [rendering]
 
 quality/2d/use_pixel_snap=true
-quality/directional_shadow/size=10240
+quality/directional_shadow/size=8192
 quality/shadow_atlas/size=8192
 quality/shadows/filter_mode=2
-quality/filters/use_nearest_mipmap_filter=true
 quality/filters/msaa=2
 environment/default_environment="res://default_env.tres"

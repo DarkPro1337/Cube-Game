@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PM_SFM_IMPACT_4.wav-2c056e8e5cf229db7271ef50641949fa.sample"
+
+[deps]
+
+source_file="res://Sounds/PM_SFM_IMPACT_4.wav"
+dest_files=[ "res://.import/PM_SFM_IMPACT_4.wav-2c056e8e5cf229db7271ef50641949fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=1

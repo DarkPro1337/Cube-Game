@@ -113,15 +113,61 @@ align = 1
 valign = 1
 script = ExtResource( 3 )
 
-[node name="FPS" type="Label" parent="."]
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 80.0
-margin_bottom = 35.0
+[node name="Debug" type="VBoxContainer" parent="."]
+margin_left = 9.0
+margin_top = 10.0
+margin_right = 51.0
+margin_bottom = 86.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="FPS" type="Label" parent="Debug"]
+margin_right = 89.0
+margin_bottom = 19.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
 text = "0 FPS"
 script = ExtResource( 5 )
+
+[node name="X" type="Label" parent="Debug"]
+margin_top = 19.0
+margin_right = 89.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+text = "X: 0"
+
+[node name="Y" type="Label" parent="Debug"]
+margin_top = 38.0
+margin_right = 89.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+text = "Y: 0"
+
+[node name="Z" type="Label" parent="Debug"]
+margin_top = 57.0
+margin_right = 89.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+text = "Z: 0"
+
+[node name="RAM" type="Label" parent="Debug"]
+margin_top = 76.0
+margin_right = 89.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+text = "RAM: 0 MB"
+
+[node name="VRAM" type="Label" parent="Debug"]
+margin_top = 95.0
+margin_right = 89.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+text = "VRAM: 0 MB"
 
 [node name="CurrentLevel" type="Label" parent="."]
 anchor_top = 1.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_1.wav-aa4065d296fd2f3d730f146b78d29e91.sample"
+
+[deps]
+
+source_file="res://Sounds/PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_1.wav"
+dest_files=[ "res://.import/PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_1.wav-aa4065d296fd2f3d730f146b78d29e91.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=1

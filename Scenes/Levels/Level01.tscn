@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/gamemanager.gd" type="Script" id=1]
 [ext_resource path="res://env.tres" type="Environment" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scripts/invoke.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Canvas.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/pause_popup.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/ambientmusic.tscn" type="PackedScene" id=10]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -32,8 +33,7 @@ script = ExtResource( 1 )
 transform = Transform( 0.808439, -0.388845, -0.441844, 0, -0.750694, 0.66065, -0.58858, -0.534095, -0.60689, 0, 5.12364, -9.87911 )
 light_energy = 0.75
 shadow_enabled = true
-shadow_bias = 0.03
-directional_shadow_blend_splits = true
+shadow_bias = 0.05
 directional_shadow_normal_bias = 0.0
 directional_shadow_bias_split_scale = 1.0
 
@@ -87,4 +87,6 @@ script = ExtResource( 7 )
 [node name="Canvas" parent="." instance=ExtResource( 8 )]
 
 [node name="pause_popup" parent="." instance=ExtResource( 9 )]
+
+[node name="ambientmusic" parent="." instance=ExtResource( 10 )]
 [connection signal="timeout" from="invoke" to="." method="_on_invoke_timeout"]

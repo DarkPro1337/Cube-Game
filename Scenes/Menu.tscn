@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Roboto-Thin.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonts/Roboto-Black.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Scenes/backgroundAmbient.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Settings.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -34,6 +36,7 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=9]
 resource_name = "FadeOut"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("FadeOut:color")
 tracks/0/interp = 1
@@ -41,10 +44,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.87451, 0.87451, 0.87451, 1 ), Color( 0.87451, 0.87451, 0.87451, 0 ) ]
+"values": [ Color( 0.827451, 0.827451, 0.827451, 1 ), Color( 0.827451, 0.827451, 0.827451, 1 ), Color( 0.827451, 0.827451, 0.827451, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("FadeOut:visible")
@@ -53,10 +56,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true, true, false ]
 }
 
 [node name="Menu" type="Control"]
@@ -122,6 +125,27 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -71.0
+margin_top = 150.0
+margin_right = 72.0
+margin_bottom = 193.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_hover = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_colors/font_color_pressed = Color( 0.588235, 0.588235, 0.588235, 1 )
+text = "QUIT"
+
+[node name="Settings" type="Button" parent="Welcome"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -71.0
 margin_top = 96.1468
 margin_right = 72.0
 margin_bottom = 139.147
@@ -135,9 +159,10 @@ custom_colors/font_color_disabled = Color( 0.196078, 0.196078, 0.196078, 1 )
 custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
 custom_colors/font_color_hover = Color( 0.196078, 0.196078, 0.196078, 1 )
 custom_colors/font_color_pressed = Color( 0.588235, 0.588235, 0.588235, 1 )
-text = "QUIT"
+text = "SETTINGS"
 
 [node name="FullScreen" type="Button" parent="Welcome"]
+visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 20.0
@@ -162,11 +187,17 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 0.87451, 0.87451, 0.87451, 1 )
+color = Color( 0.827451, 0.827451, 0.827451, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "FadeOut"
 anims/FadeOut = SubResource( 9 )
+
+[node name="backgroundAmbient" parent="." instance=ExtResource( 5 )]
+
+[node name="Settings" parent="." instance=ExtResource( 6 )]
+visible = false
 [connection signal="pressed" from="Welcome/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Welcome/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Welcome/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="toggled" from="Welcome/FullScreen" to="." method="_on_FullScreen_toggled"]

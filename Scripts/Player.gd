@@ -14,6 +14,9 @@ var rightKey
 func _ready():
 	global.player = self
 
+func disable_sound():
+	$disabledSound.play()
+
 # brackeys said that in unity this is better for player input, so it's here ¯\_(ツ)_/¯
 # left and right bool values
 # analogue of void update() in unity

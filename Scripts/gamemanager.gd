@@ -15,6 +15,7 @@ func EndGame():
 	if gameHasEnded == false:
 		gameHasEnded = true
 		print("GAME OVER!") # for debugging
+		global.player.disable_sound()
 		Engine.set_time_scale(slowMotion)
 		global.invoke.start(restartDelay)
 
