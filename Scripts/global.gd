@@ -6,6 +6,7 @@ var camera
 var invoke
 var gamemanager
 var end
+var menu
 var canvas
 var debug = false
 

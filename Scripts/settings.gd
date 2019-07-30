@@ -42,7 +42,7 @@ func _on_fullscreen_button_toggled(button_pressed):
 func _on_volume_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
 	
-	if value <= -100:
+	if value <= -50:
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
 		master_mute = true
 		$ColorRect/volume_panel/volume_mute.pressed = true
@@ -67,6 +67,7 @@ func _on_volume_mute_toggled(button_pressed):
 		$ColorRect/volume_panel/volume_mute.text = "MUTE"
 
 func _on_back_pressed():
+	global.menu.in_settings = false
 	hide()
 
 func _on_debug_button_toggled(button_pressed):
