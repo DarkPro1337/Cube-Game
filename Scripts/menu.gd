@@ -8,6 +8,7 @@ var selected
 # enables fadeout
 func _ready():
 	global.menu = self
+	_on_Welcome_resized()
 	fadeOut_enable()
 	$Welcome/Selection.rect_position = $Welcome/Start.rect_position - Vector2(5, 4.883)
 
@@ -64,3 +65,6 @@ func _on_Settings_mouse_entered():
 func _on_Quit_mouse_entered():
 	selection = 2
 	$Welcome/Selection.rect_position = selected[selection] - button[selection]
+
+func _on_Welcome_resized():
+	selected = {0: Vector2($Welcome/Start.rect_position), 1: Vector2($Welcome/Settings.rect_position), 2: Vector2($Welcome/Quit.rect_position)}

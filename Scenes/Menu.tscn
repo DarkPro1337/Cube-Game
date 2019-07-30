@@ -112,10 +112,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -75.0
-margin_top = 43.0
-margin_right = 78.0
-margin_bottom = 96.0
+margin_left = -76.0
+margin_top = 37.0
+margin_right = 77.0
+margin_bottom = 90.0
 rect_pivot_offset = Vector2( 76, 26 )
 custom_styles/panel = SubResource( 10 )
 
@@ -198,6 +198,7 @@ anims/FadeOut = SubResource( 9 )
 
 [node name="Settings" parent="." instance=ExtResource( 6 )]
 visible = false
+[connection signal="resized" from="Welcome" to="." method="_on_Welcome_resized"]
 [connection signal="mouse_entered" from="Welcome/Start" to="." method="_on_Start_mouse_entered"]
 [connection signal="pressed" from="Welcome/Start" to="." method="_on_Start_pressed"]
 [connection signal="mouse_entered" from="Welcome/Settings" to="." method="_on_Settings_mouse_entered"]

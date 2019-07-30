@@ -143,6 +143,7 @@ step = 0.5
 focus_mode = 0
 
 [node name="debug_panel" type="Panel" parent="ColorRect"]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -265.0
@@ -221,7 +222,6 @@ pressed = true
 text = "TOGGLE"
 
 [node name="res_panel" type="Panel" parent="ColorRect"]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -265.0
@@ -251,7 +251,7 @@ custom_fonts/font = SubResource( 4 )
 custom_colors/selection_color = Color( 0.196078, 0.196078, 0.196078, 1 )
 custom_colors/cursor_color = Color( 0.196078, 0.196078, 0.196078, 1 )
 custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
-text = "1280"
+text = "960"
 align = 1
 context_menu_enabled = false
 clear_button_enabled = true
@@ -276,7 +276,7 @@ custom_fonts/font = SubResource( 4 )
 custom_colors/selection_color = Color( 0.196078, 0.196078, 0.196078, 1 )
 custom_colors/cursor_color = Color( 0.196078, 0.196078, 0.196078, 1 )
 custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
-text = "720"
+text = "540"
 align = 1
 context_menu_enabled = false
 clear_button_enabled = true
