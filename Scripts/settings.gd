@@ -3,6 +3,7 @@ extends Control
 var master_mute = false
 var width_temp = 1280
 var height_temp = 720
+var custom_res
 
 func _ready():
 	# fullscreen
@@ -91,4 +92,8 @@ func _on_height_edit_text_changed(new_text):
 	height_temp = new_text
 
 func _on_apply_button_pressed():
-	OS.set_window_size(Vector2(float(width_temp), float(height_temp)))
+	custom_res = Vector2(float(width_temp), float(height_temp))
+	OS.set_window_size(custom_res)
+	var screen_size = OS.get_screen_size(0)
+	var window_size = OS.get_window_size()
+	OS.set_window_position(screen_size*0.5 - window_size*0.5)
