@@ -1,8 +1,8 @@
 extends Control
 
 var master_mute = false
-var width_temp = 1280
-var height_temp = 720
+var width_temp = 960
+var height_temp = 540
 var custom_res
 
 func _ready():

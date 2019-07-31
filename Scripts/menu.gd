@@ -1,6 +1,6 @@
 extends Control
 
-var button = {0: Vector2(5, 4.883), 1: Vector2(5, 5.147), 2: Vector2(5, 5)}
+var button = {0: Vector2(5, 5), 1: Vector2(5, 5), 2: Vector2(5, 5)}
 var selection = 0
 var in_settings = false
 var selected

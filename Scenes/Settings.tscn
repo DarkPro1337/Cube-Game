@@ -222,6 +222,7 @@ pressed = true
 text = "TOGGLE"
 
 [node name="res_panel" type="Panel" parent="ColorRect"]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -265.0

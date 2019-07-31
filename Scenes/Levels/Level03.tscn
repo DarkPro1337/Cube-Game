@@ -61,7 +61,6 @@ material/0 = null
 shape = SubResource( 4 )
 
 [node name="Obstacles" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Obstacle_0" parent="Obstacles" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 19.7984 )
@@ -137,10 +136,6 @@ axis_lock_angular_z = true
 
 [node name="Obstacle_18" parent="Obstacles" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 328.798 )
-axis_lock_angular_z = true
-
-[node name="Obstacle_19" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 330.798 )
 axis_lock_angular_z = true
 
 [node name="Obstacle_20" parent="Obstacles" instance=ExtResource( 5 )]

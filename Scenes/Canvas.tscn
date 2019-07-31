@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/canvas.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Roboto-Thin.ttf" type="DynamicFontData" id=2]
@@ -17,15 +17,18 @@ font_data = ExtResource( 2 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 100
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 52
 font_data = ExtResource( 7 )
 
-[sub_resource type="Animation" id=5]
-resource_name = "Fadeout"
+[sub_resource type="Animation" id=6]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("FadeOut:color")
@@ -40,7 +43,7 @@ tracks/0/keys = {
 "values": [ Color( 0.87451, 0.87451, 0.87451, 1 ), Color( 0.87451, 0.87451, 0.87451, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 1.45
 step = 0.01
 tracks/0/type = "value"
@@ -98,6 +101,10 @@ tracks/3/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="Score" type="Label" parent="."]
 anchor_left = 0.5
@@ -114,6 +121,7 @@ valign = 1
 script = ExtResource( 3 )
 
 [node name="Debug" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 9.0
 margin_top = 10.0
 margin_right = 51.0
@@ -173,11 +181,11 @@ text = "VRAM: 0 MB"
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 9.0
-margin_top = -40.0
-margin_right = 94.0
-margin_bottom = -10.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+margin_top = -42.0
+margin_right = 107.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 0.501961 )
 text = "LEVEL:"
 valign = 2
 script = ExtResource( 6 )
@@ -197,7 +205,7 @@ margin_left = -130.0
 margin_top = -60.0
 margin_right = 148.0
 margin_bottom = 58.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 0 )
 text = "LEVEL"
 align = 1
@@ -212,7 +220,7 @@ margin_left = -130.0
 margin_top = 30.0
 margin_right = 153.0
 margin_bottom = 96.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 0 )
 text = "COMPLETE"
 align = 1
@@ -226,8 +234,8 @@ color = Color( 0.87451, 0.87451, 0.87451, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Fadeout"
-anims/Fadeout = SubResource( 5 )
-anims/completeLevel = SubResource( 6 )
+anims/Fadeout = SubResource( 6 )
+anims/completeLevel = SubResource( 7 )
 
 [node name="ESC" parent="." instance=ExtResource( 8 )]
 visible = false
