@@ -4,6 +4,8 @@ var button = {0: Vector2(5, 5), 1: Vector2(5, 5), 2: Vector2(5, 5)}
 var selection = 0
 var in_settings = false
 var selected
+var savefile= "res://settings.cfg"
+
 
 # enables fadeout
 func _ready():
@@ -43,15 +45,19 @@ func fadeOut_enable():
 
 # simple start button, loads first level
 func _on_Start_pressed():
+	$clickSound.play()
 	get_tree().change_scene_to(load("res://Scenes/Levels/Level01.tscn"))
 
 # opens settings on press
 func _on_Settings_pressed():
 	in_settings = true
+	$clickSound.play()
 	$Settings.show()
 
 # quit on press
 func _on_Quit_pressed():
+	$clickSound.play()
+	
 	get_tree().quit()
 
 func _on_Start_mouse_entered():

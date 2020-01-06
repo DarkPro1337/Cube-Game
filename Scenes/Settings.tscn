@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/settings.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Images/hslider_grabber.png" type="Texture" id=3]
 [ext_resource path="res://Images/hslider_grabber_hl.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/clickSound.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -89,7 +90,6 @@ toggle_mode = true
 text = "TOGGLE"
 
 [node name="volume_panel" type="Panel" parent="ColorRect"]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -265.0
@@ -225,9 +225,9 @@ text = "TOGGLE"
 editor/display_folded = true
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -265.0
+margin_left = -264.0
 margin_top = 270.0
-margin_right = 263.0
+margin_right = 264.0
 margin_bottom = 373.0
 custom_styles/panel = SubResource( 3 )
 __meta__ = {
@@ -333,6 +333,8 @@ margin_bottom = -13.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
 text = "ver. 1.2"
+
+[node name="clickSound" parent="." instance=ExtResource( 5 )]
 [connection signal="toggled" from="ColorRect/fullscreen_panel/fullscreen_button" to="." method="_on_fullscreen_button_toggled"]
 [connection signal="toggled" from="ColorRect/volume_panel/volume_mute" to="." method="_on_volume_mute_toggled"]
 [connection signal="value_changed" from="ColorRect/volume_panel/volume_slider" to="." method="_on_volume_slider_value_changed"]

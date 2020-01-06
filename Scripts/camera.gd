@@ -19,5 +19,4 @@ func _physics_process(delta):
 		fov = fov_change
 	elif fov_change == 90:
 		fov_change = 90
-	print(fov)
 	translation = global.player.translation + offset

@@ -9,6 +9,7 @@ var end
 var menu
 var canvas
 var debug = false
+var settings
 
 # current level counter
 var current_stage = 1
